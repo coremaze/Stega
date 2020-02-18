@@ -59,11 +59,8 @@ public class Model {
     }
 
     public TreeMap<String, byte[]> getFilesFromImage(String imageFilePath) {
-        //imageFilePath is received, but not used yet since we aren't generating encoded files yet
         TreeMap<String, byte[]> map = new TreeMap<>();
         try {
-            //map.put("testfile1.txt", new byte[]{'a', 's', 'd', 'f'});
-            //map.put("testfile2.txt", new byte[]{'w', 'e', 'e', 'e'});
             byte[] decodedBuffer = decodeBufferFromImage(imageFilePath);
             return decodeFiles(decodedBuffer);
 
